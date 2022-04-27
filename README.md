@@ -24,7 +24,7 @@ To use this project you first need to have installed the following:
 
 The version of ruby that is needed for this project is 
 
-+ 2.7.0
++ 3.1.1
 
 Once you have installed them, you need to use the following command to clone the repository:
 
