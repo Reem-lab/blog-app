@@ -36,7 +36,7 @@ git clone git@github.com:Reem-lab/blog-app.git
 
 Next, use this command to create the databases:
 ```
-rake db:create
+rails db:create
 ```
 
 ## Usage
