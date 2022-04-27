@@ -1,24 +1,79 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/static/v1?label=BY&message=Reemoz&color=pink)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# BLOG APP
 
-Things you may want to cover:
+> Blog Web Application that holds posts per user.
+
+## Built With
+
+- Ruby
+- Ruby on Rails
+- RSpec, PostgreSQL
+
+## Configuration
+
+To use this project you first need to have installed the following:
+
++ Node.js
++ Ruby
++ PostgreSQL
++ Rails
 
 * Ruby version
 
-* System dependencies
+The version of ruby that is needed for this project is 
 
-* Configuration
++ 2.7.0
 
-* Database creation
+Once you have installed them, you need to use the following command to clone the repository:
 
-* Database initialization
+```
+git clone https://github.com/Yothu/blog-app.git
+```
 
-* How to run the test suite
+### Database creation
 
-* Services (job queues, cache servers, search engines, etc.)
+Next, use this command to create the databases:
+```
+rake db:create
+```
 
-* Deployment instructions
+## Usage
 
-* ...
+Finally, use the following command to initialize the live server:
+
+```
+rails s
+```
+
+## Author
+
+
+👤 **Reem Janina**
+
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@Reem-lab](https://github.com/Reem-lab)
+ **Twitter** | [Rem79940127](https://twitter.com/Rem79940127)
+ **LinkdIn** | [reem-janina](https://www.linkedin.com/in/reem-janina-ab74ab21a/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
