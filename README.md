@@ -29,7 +29,7 @@ The version of ruby that is needed for this project is
 Once you have installed them, you need to use the following command to clone the repository:
 
 ```
-git clone https://github.com/Yothu/blog-app.git
+git clone git@github.com:Reem-lab/blog-app.git
 ```
 
 ### Database creation
