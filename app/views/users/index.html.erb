@@ -1,1 +1,26 @@
-<h1> here is list of users </h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Platform Blog Posts</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>  
+</head>
+<body>
+    <h1>The Users List</h1>
+
+    <section>
+    <% @users.each do |user| %>
+     <div>
+     <img src="#{@users.photo}" alt="user image" />
+     </div> 
+     <div>
+         <a href=<%= "/users/#{user.id}" =%> >
+         <p> <%= user.name %> </p>
+         <span> Number of posts : <%= user.posts_counter %> <span>
+     </div>
+     </a>
+     <% end %>
+     </section>
+</body>
+</html>
