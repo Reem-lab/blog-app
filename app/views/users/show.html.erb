@@ -1,1 +1,39 @@
-<h1> here is a user</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Platform Blog Posts</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>  
+</head>
+<body>
+    <h1>Here is a User</h1>
+
+  <div>
+     <div>
+       <img src="#{@user.photo}" alt="user image" />
+     </div> 
+     <div>
+         <p> <%= @user.name %> </p>
+         <span> Number of posts : <%= @user.posts_counter %> <span>
+     </div>
+  </div>
+
+    <div>
+        <h2>Bio </h2>
+       <p> <%= @user.bio %> </p>
+    </div>
+    <div>
+    <%  @user.display_posts.each do |post| %>
+      <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> >
+       <h3> PostNo <%= post.id %> </h3>
+       <p> <%= post.text %> </p>
+       <div>
+         <span>Comments: <%= "#{post.comments_counter || 0}" %> </span>
+         <span> Likes: <%= "#{post.likes_counter || 0}" %> </span>
+      </div>
+      </a>
+   <% end %>
+       <a href=<%="/users/#{@user.id}/posts" %> > See All Posts </a>
+     </div>
+</body>
+</html>
