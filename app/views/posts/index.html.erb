@@ -1,1 +1,40 @@
-<p> here is list of posts to a given user </p>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Platform Blog Posts</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>  
+</head>
+<body>
+    <h1>List of posts to a given user</h1>
+     <div>
+      <img src="#{@user.photo}" alt="user image" >
+     </div> 
+     <div>
+         <p> <%= @user.name %> </p>
+         <span> Number of posts : <%= @user.posts_counter %> <span>
+     </div>
+
+    <section>
+    <% @posts.each do |post| %>
+      <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> >
+       <div>
+          <p> <%= post.title %> </p>
+          <p> <%= post.text %> </p>
+          <div>
+            <span>Comments: <%= "#{post.comments_counter || 0}" %> </span>
+            <span> Likes: <%= "#{post.likes_counter || 0}" %> </span>
+         </div>
+     </div>
+     </a>
+
+     <div>
+     <%= post.display_comments.each do |comment| %> 
+        <p> <%= "#{comment.author.name}: #{comment.text}" %> </p>
+     <% end %>
+     </div>
+     <% end %>
+  </section>
+</body>
+</html>
