@@ -20,7 +20,6 @@
   box-sizing: border-box;
 }
 
-
 html {
   /* 10px / 16px = 0.625 = 62.5% */
   font-size: 62.5%;
@@ -34,13 +33,12 @@ body {
 }
 
 .users_list {
-   max-width: 120rem;
-   margin: 0 auto;
-   padding: 0 3.2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .users {
   display: flex;
   justify-content: space-between;
 }
-
