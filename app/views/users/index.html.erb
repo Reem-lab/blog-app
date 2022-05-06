@@ -7,17 +7,18 @@
   <%= csrf_meta_tags %>  
 </head>
 <body>
+    <section class="users_list">
     <h1>The Users List</h1>
-
-    <section>
     <% @users.each do |user| %>
-     <div>
+      <div class="users">
+     <div class="user_image">
      <img src="#{@users.photo}" alt="user image" />
      </div> 
-     <div>
+     <div class="info">
          <a href=<%= "/users/#{user.id}" =%> >
-         <p> <%= user.name %> </p>
-         <span> Number of posts : <%= user.posts_counter %> <span>
+         <p class="user_name"> <%= user.name %> </p>
+         <span class="number_posts"> Number of posts : <%= user.posts_counter %> <span>
+     </div>
      </div>
      </a>
      <% end %>
