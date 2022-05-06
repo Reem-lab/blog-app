@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Platform Blog Posts</title>
+  <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>  
+</head>
+<body>
+<div>
+<div>
+<h2> create a post </h2>
+</div>
+   <%= form_with model: @post, url: "/posts" do |form| %>
+    <%= form.text_field :title, placeholder: "title" %>
+    <%= form.text_area :text,  placeholder: "Add a post" %>
+    <%= form.submit "submit" %>
+    <% end %>
+  </div>
+</body>
+</html>
