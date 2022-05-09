@@ -17,11 +17,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = current_user.posts.new(params.require(:post).permit(:title, :text))
+    @post = current_user.posts.new(params.require(:post).permit(:title, :text))
+    @post.author_id = current_user.id
+    @post.comments_counter = 0
+    @post.likes_counter = 0
 
-    if post.save
+    if @post.save
       flash[:success] = 'Post saved successfully'
-      redirect_to "/users/#{post.author.id}/posts/#{post.id}"
+      redirect_to "/users/#{@post.author.id}/posts/#{@post.id}"
     else
       flash.now[:error] = 'Error: Post could not be created!!'
       render :new

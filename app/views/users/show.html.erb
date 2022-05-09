@@ -6,37 +6,46 @@
   <%= csrf_meta_tags %>  
 </head>
 <body>
+
+<section class="container">
+
+ <div class="users_list">
     <h1>Here is a User</h1>
+    <div class="users user-post">
+       <div class="user_image">
+          <img class="img" src="#{@user.photo}" alt="user image" />
+        </div> 
+        <div class="info">
+           <p  class="user_name"> <%= @user.name %> </p>
+           <span class="number_posts"> Number of posts : <%= "#{@user.posts_counter || 0}" %> <span>
+        </div>
+        <div class="Add-post">
+        <a href=<%="/posts/new" %>>Add a new post</a>
+      </div>
+       </div> 
+       </div>
 
-  <div>
-     <div>
-       <img src="#{@user.photo}" alt="user image" />
-     </div> 
-     <div>
-         <p> <%= @user.name %> </p>
-         <span> Number of posts : <%= @user.posts_counter %> <span>
-     </div>
-     <div>
-       <a href=<%="/posts/new" %>>Add a new post</a>
-     </div>
-  </div>
-
-    <div>
-        <h2>Bio </h2>
-       <p> <%= @user.bio %> </p>
+       <div class="bio">
+          <h2>Bio </h2>
+         <p class="post-text"><%= @user.bio %> </p>
+       </div>
     </div>
-    <div>
+    <div class="posts">
     <%  @user.display_posts.each do |post| %>
       <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> >
        <h3> PostNo <%= post.id %> </h3>
-       <p> <%= post.text %> </p>
-       <div>
+       <div class="wrap-post">
+       <p class="post-text"> <%= post.text %> </p>
+       <div class="comments-likes">
          <span>Comments: <%= "#{post.comments_counter || 0}" %> </span>
          <span> Likes: <%= "#{post.likes_counter || 0}" %> </span>
       </div>
+      </div>
       </a>
-   <% end %>
-       <a href=<%="/users/#{@user.id}/posts" %> > See All Posts </a>
+     <% end %>
+       <a class="see-posts" href=<%="/users/#{@user.id}/posts" %> > See All Posts </a>
      </div>
+
+ </section>
 </body>
 </html>
