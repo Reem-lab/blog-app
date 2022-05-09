@@ -10,18 +10,19 @@
     <section class="users_list">
     <h1>The Users List</h1>
     <% @users.each do |user| %>
-      <div class="users">
-     <div class="user_image">
-     <img src="#{@users.photo}" alt="user image" />
-     </div> 
-     <div class="info">
+    <div class="users">
+      <div class="user_image">
+        <img class="img" src=<%= user.photo %> alt="user image" />
+      </div> 
          <a href=<%= "/users/#{user.id}" =%> >
-         <p class="user_name"> <%= user.name %> </p>
-         <span class="number_posts"> Number of posts : <%= user.posts_counter %> <span>
+         <div class="info">
+           <p class="user_name"> <%= user.name %> </p>
+            <span class="number_posts"> Number of posts : <%= "#{user.posts_counter || 0}" %> <span>
+         </div>
+         </a>
      </div>
-     </div>
-     </a>
      <% end %>
+     
      </section>
 </body>
 </html>
