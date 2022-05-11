@@ -9,6 +9,10 @@
 <body>
     <section class="users_list">
     <h1>The Users List</h1>
+    <div class="Add-post">
+      <a href=<%="/posts/new" %>>Add a new post</a>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  </div>
     <% @users.each do |user| %>
     <div class="users">
       <div class="user_image">

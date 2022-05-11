@@ -80,12 +80,23 @@ body {
 }
 
 .Add-post {
+  margin-top: 1.2rem;
+  height: auto;
   border: 3px solid #333;
   font-size: 2.4rem;
   font-weight: 500;
   text-align: center;
   padding: 1.2rem;
   background-color: #f1d4bc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Add-post a {
+  text-decoration: none;
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .bio {
@@ -110,13 +121,22 @@ body {
 }
 
 .see-posts {
+  width: 15rem;
+  height: 3.2rem;
+  padding: 1.2rem;
   background-color: #f1d4bc;
-  text-decoration: none;
-  color: #333;
-  font-size: 2.4rem;
-  margin-top: 3.2rem;
-  border: 3px solid #333;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: all 1s;
+  font-size: 1.6rem;
+  font-weight: 600;
   text-align: center;
+  align-self: center;
+}
+
+.see-posts:hover {
+  background-color: #faf1e9;
 }
 
 .posts {
@@ -155,4 +175,85 @@ h3 {
 
 .comments-likes {
   font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.field {
+  width: 40rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.field input {
+  width: 100%;
+  height: 3.6rem;
+  margin-top: 1.2rem;
+}
+
+.btn {
+  width: 10rem;
+  height: 3.2rem;
+  align-self: center;
+  background-color: #f1d4bc;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: all 1s;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #faf1e9;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #212529;
+}
+
+.container1 {
+  width: 50%;
+  margin: 8% 25%;
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.075rem;
+  border: 1px solid #212529;
+  background-color: #faf1e9;
+}
+
+.label-pass {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 1.2rem;
+}
+
+.check {
+  margin: 15px auto;
+  display: flex;
+  font-size: 13px;
+}
+
+.links {
+  text-decoration: none;
+  color: #333;
+  transition: all 1s;
+  font-size: 14px;
+  margin: 7px 0;
+}
+
+.links:hover {
+  color: #796a5e;
 }

@@ -7,22 +7,26 @@
   <%= csrf_meta_tags %>  
 </head>
 <body>
+<div class="users_list">
     <h1>List of posts to a given user</h1>
-     <div>
+    <div class="users user-post">
+     <div class="user_image">
       <img src="#{@user.photo}" alt="user image" >
      </div> 
-     <div>
+     <div class="info">
          <p> <%= @user.name %> </p>
          <span> Number of posts : <%= @user.posts_counter %> <span>
      </div>
+  </div> 
+       </div>
 
-    <section>
+    <section class="posts">
     <% @posts.each do |post| %>
       <a href=<%= "/users/#{@user.id}/posts/#{post.id}" %> >
-       <div>
-          <p> <%= post.title %> </p>
-          <p> <%= post.text %> </p>
-          <div>
+       <div class="wrap-post">
+          <p> Title: <%= post.title %> </p>
+          <p> Content: <%= post.text %> </p>
+          <div class="comments-likes">
             <span>Comments: <%= "#{post.comments_counter || 0}" %> </span>
             <span> Likes: <%= "#{post.likes_counter || 0}" %> </span>
          </div>
