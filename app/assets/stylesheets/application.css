@@ -80,12 +80,24 @@ body {
 }
 
 .Add-post {
+  margin-top: 1.2rem;
+  /* width: 20rem; */
+  height: auto;
   border: 3px solid #333;
   font-size: 2.4rem;
   font-weight: 500;
   text-align: center;
   padding: 1.2rem;
   background-color: #f1d4bc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Add-post a {
+  text-decoration: none;
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .bio {
@@ -110,13 +122,22 @@ body {
 }
 
 .see-posts {
+  width: 15rem;
+  height: 3.2rem;
+  padding: 1.2rem;
   background-color: #f1d4bc;
-  text-decoration: none;
-  color: #333;
-  font-size: 2.4rem;
-  margin-top: 3.2rem;
-  border: 3px solid #333;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: all 1s;
+  font-size: 1.6rem;
+  font-weight: 600;
   text-align: center;
+  align-self: center;
+}
+
+.see-posts:hover {
+  background-color: #faf1e9;
 }
 
 .posts {
@@ -155,4 +176,36 @@ h3 {
 
 .comments-likes {
   font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.field {
+  width: 40rem;
+  height: 3.5rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.btn {
+  width: 10rem;
+  height: 3.2rem;
+  align-self: center;
+  background-color: #f1d4bc;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: all 1s;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #faf1e9;
 }
