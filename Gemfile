@@ -14,6 +14,7 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data'
+gem 'cancancan'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
