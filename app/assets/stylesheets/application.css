@@ -81,7 +81,6 @@ body {
 
 .Add-post {
   margin-top: 1.2rem;
-  /* width: 20rem; */
   height: auto;
   border: 3px solid #333;
   font-size: 2.4rem;
@@ -194,8 +193,10 @@ h3 {
   margin-bottom: 15px;
 }
 
-.field input{
+.field input {
   width: 100%;
+  height: 3.6rem;
+  margin-top: 1.2rem;
 }
 
 .btn {
@@ -215,7 +216,6 @@ h3 {
   background-color: #faf1e9;
 }
 
-
 h2 {
   font-size: 2.4rem;
   font-weight: 700;
@@ -231,12 +231,6 @@ h2 {
   gap: 0.075rem;
   border: 1px solid #212529;
   background-color: #faf1e9;
-}
-
-.field input {
-  width: 100%;
-  height: 3.6rem;
-  margin-top: 1.2rem;
 }
 
 .label-pass {
