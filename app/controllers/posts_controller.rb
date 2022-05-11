@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -17,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(params.require(:post).permit(:title, :text))
+    @post = current_user.posts.new(post_params)
     @post.author_id = current_user.id
     @post.comments_counter = 0
     @post.likes_counter = 0
@@ -37,4 +38,9 @@ class PostsController < ApplicationController
     redirect_to "/users/#{@post.author.id}/posts"
   end
 
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
+  end
 end
