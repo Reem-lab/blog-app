@@ -16,8 +16,8 @@
        <%= form_with model: @like, url: "/users/#{@current_user.id}/posts/#{@post.id}/likes" do |form| %>
            <% form.submit "👍🏻" %>
         <% end %>
+        <%= button_to "Delete", "/users/#{@current_user.id}/posts/#{@post.id}", method: :delete, data: { confirm: "Are you sure?" } %>
        </div>
-
        <div>
        <p> <%= @post.text %> </p>
        <div>
@@ -26,6 +26,7 @@
   <div>
   <% @post.comments.each do |comment| %>
   <p> <%= "#{comment.author.name}: #{comment.text}" %> </p>
+  <%= button_to "Delete", "/users/#{@current_user.id}/posts/#{@post.id}/comments/#{comment.id}", method: :delete, data: { confirm: "Are you sure?" } %>
   <% end %>
   </div>
 
