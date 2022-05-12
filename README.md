@@ -58,6 +58,11 @@ rails s
  **Twitter** | [Rem79940127](https://twitter.com/Rem79940127)
  **LinkdIn** | [reem-janina](https://www.linkedin.com/in/reem-janina-ab74ab21a/)
 
+ 👤 **Aime Malaika**
+- GitHub: [@aimemalaika](https://github.com/aimemalaika)
+- Twitter: [@aimemalaika](https://twitter.com/Aime_Malaika)
+- LinkedIn: [aimemalaika](https://linkedin.com/in/aimemalaika)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
