@@ -15,11 +15,18 @@ Rails.application.routes.draw do
   get '/users/:user_id/posts/', to: 'posts#index'
   get '/users/:user_id/posts/:id/', to: 'posts#show'
 
-  
-  
+
   post '/posts', to: 'posts#create'
   post '/users/:user_id/posts/:id/comments', to: 'comments#create'
   post '/users/:user_id/posts/:id/likes', to: 'likes#create'
   delete '/users/:user_id/posts/:id', to: 'posts#destroy'
   delete '/users/:user_id/posts/:post_id/comments/:id', to: 'comments#destroy'
+
+  namespace :api, :defaults => {:format => :json} do
+    resources :users, only: [:index, :show] do
+      resources :posts, only: [:index, :show] do
+        resources :comments, only: [:index, :create] 
+      end
+    end
+  end
 end

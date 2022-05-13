@@ -15,6 +15,8 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data'
+gem 'devise-jwt'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'database_cleaner'
